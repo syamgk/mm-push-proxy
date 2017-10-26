@@ -12,8 +12,7 @@ RUN cd /opt && \
 
 COPY mattermost-push-proxy.json /opt/mattermost-push-proxy/config/
 
-RUN chmod 777 /opt/mattermost-push-proxy/config/mattermost-push-proxy.json
-
+RUN chmod -R 777 /opt/mattermost-push-proxy/config/
 COPY docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
