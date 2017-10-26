@@ -10,7 +10,7 @@ RUN cd /opt && \
     wget https://github.com/mattermost/mattermost-push-proxy/releases/download/v${MMPP_VERSION}/mattermost-push-proxy-${MMPP_VERSION}${MMPP_VERSION_MINOR}.tar.gz && \
     tar xvf mattermost-push-proxy-${MMPP_VERSION}${MMPP_VERSION_MINOR}.tar.gz
 
-COPY mattermost-push-proxy.json /opt/mattermost-push-proxy/
+COPY mattermost-push-proxy.json /opt/mattermost-push-proxy/config/
 
 RUN chmod 777 /opt/mattermost-push-proxy/mattermost-push-proxy.json
 
